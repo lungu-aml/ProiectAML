@@ -15,23 +15,31 @@ public:
 
 
 
-/*
+
 class time:public input
 {
 public:
-    void m_s();
-    void s_m();
+    void min_s();
+    void s_min();
     void h_s();
     void s_h();
     void d_s();
     void s_d();
     void d_h();
     void h_d();
-    void m_h();
-    void h_m();
+    void min_h();
+    void h_min();
 
 };
-*/
+
+class power:public input
+{
+    public:
+    void HP_Js();
+    void Js_HP();
+};
+
+
 class length:public input
 {
 public:
@@ -123,8 +131,34 @@ public:
 
 };
 
+//power
+void power::HP_Js()
+{
+    cout<<"    Horse Power= ";
+    cin>>i;
+    cout<<"    Joule/second= "<<(long double)i*745.699921;
+}
+void power::Js_HP()
+{
+    cout<<"    Joule/second= ";
+    cin>>i;
+    cout<<"    Horse Power= "<<(long double)i/745.699921;
+}
+
 //time
 
+void time::min_s()
+{
+    cout<<"    Minute= ";
+    cin>>i;
+    cout<<"    Second= "<<(long double)i*60;
+}
+void time::s_min()
+{
+    cout<<"    Second= ";
+    cin>>i;
+    cout<<"    Minute= ";
+}
 
 
 //length
@@ -505,6 +539,458 @@ void vol::gallon_L()
     cout<<"   Gallon= ";
     cin>>i;
     cout<<"   Litre= "<<i*4.54609;
+}
+int main()
+{
+    system("cls");
+
+    length b;
+    weight c;
+    vol d;
+    area e;
+    temp f;
+    power g;
+    int x,y;
+
+    while(1)
+    {
+        system("cls");
+        cout<<"UNIT CONVERTOR"<<endl<<endl;
+        cout<<"      TYPE NUMBER:"<<endl;
+        cout<<"  1: Length" <<endl<< "  2: Temperature"<<endl<<"  3: Weight"<<endl<<"  4: Area"<<endl<<"  5: Volume"<<endl<<"  6: Power"<<endl<<endl<<"  0: Exit"<<endl<<endl;
+        cout<<endl<<"Please choose your Conversion Type:"<<endl<<endl;
+        cin>>x;
+        if(x==1)
+        {
+            system("cls");
+
+            cout<<endl<<" choose your unit conversion:"<<endl<<endl;
+
+            cout<<"  1 : mm to m"<<endl;
+            cout<<"  2 : m to mm"<<endl;
+            cout<<"  3 : cm to m"<<endl;
+            cout<<"  4 : m to cm"<<endl;
+            cout<<"  5 : cm to km"<<endl;
+            cout<<"  6 : km to cm"<<endl;
+            cout<<"  7 : m to mile"<<endl;
+            cout<<"  8 : mile to m"<<endl;
+            cout<<"  9 : km to mile"<<endl;
+            cout<<" 10 : mile to km"<<endl;
+            cout<<" 11 : feet to m"<<endl;
+            cout<<" 12 : m to feet"<<endl;
+            cout<<" 13 : inch to m"<<endl;
+            cout<<" 14 : m to inch"<<endl;
+            cout<<" 15 : yard to m"<<endl;
+            cout<<" 16 : m to yard"<<endl<<endl;
+            cout<<" 0 : Back to Main Menu"<<endl<<endl;
+
+
+            while(1)
+            {
+                cout<<endl<<" Please Enter Your Choice: "<<endl<<endl;
+                cin>>y;
+
+                if (y==1)
+                {
+                    b.mm_m();
+                }
+                else if(y==2)
+                {
+                    b.m_mm();
+                }
+                else if (y==3)
+                {
+                    b.cm_m();
+                }
+                else if (y==4)
+                {
+                    b.m_cm();
+                }
+                else if (y==5)
+                {
+                    b.cm_km();
+                }
+                else if (y==6)
+                {
+                    b.km_cm();
+                }
+                else if (y==7)
+                {
+                    b.m_mile();
+                }
+                else if (y==8)
+                {
+                    b.mile_m();
+                }
+                else if (y==9)
+                {
+                    b.km_mile();
+                }
+                else if (y==10)
+                {
+                    b.mile_km();
+                }
+                else if (y==11)
+                {
+                    b.feet_m();
+                }
+                else if (y==12)
+                {
+                    b.m_feet();
+                }
+                else if (y==13)
+                {
+                    b.inch_m();
+                }
+                else if(y==14)
+                {
+                    b.m_inch();
+                }
+                else if (y==15)
+                {
+                    b.yard_m();
+                }
+                else if (y==16)
+                {
+                    b.m_yard();
+                }
+                else if (y==0)
+                {
+                    break;
+                }
+            }
+        }
+        else if(x==2)
+        {
+            system("cls");
+            cout<<endl<<" Choose your unit conversion:"<<endl<<endl;
+
+            cout<<"  1: Celsius to Fahrenheit"<<endl;
+            cout<<"  2: Fahrenheit to Celsius"<<endl;
+            cout<<"  3: Celsius to Kelvin"<<endl;
+            cout<<"  4: Kelvin to Celsius"<<endl<<endl;
+            cout<<"  0: Back to The Main Menu"<<endl<<endl;
+            while(1)
+            {
+                cout<<endl<<" Please Enter Your Choice: "<<endl<<endl;
+                cin>>y;
+
+                if(y==1)
+                {
+                    f.cel_f();
+                }
+                else if(y==2)
+                {
+                    f.f_cel();
+                }
+                else if (y==3)
+                {
+                    f.cel_k();
+                }
+                else if(y==4)
+                {
+                    f.k_cel();
+                }
+                else if(y==0)
+                {
+                    break;
+                }
+            }
+        }
+        else if(x==3)
+        {
+            system("cls");
+            cout<<"choose your unit conversion :"<<endl<<endl;
+
+            cout<<"  1: Milligram to Gram"<<endl;
+            cout<<"  2: Gram to milligram"<<endl;
+            cout<<"  3: Gram to kilogram"<<endl;
+            cout<<"  4: Kilogram to gram"<<endl;
+            cout<<"  5: Pound to kilogram"<<endl;
+            cout<<"  6: Kilogram to pound"<<endl;
+            cout<<"  7: Gram to Pound"<<endl;
+            cout<<"  8: Pound to gram"<<endl;
+            cout<<"  9: Kilogram to Ton"<<endl;
+            cout<<" 10: Ton to Kilogram"<<endl<<endl;
+            cout<<" 0: Back to The Main Menu"<<endl<<endl;
+
+            while(1)
+            {
+                cout<<endl<<"Please Enter Your Choice: "<<endl<<endl;
+                cin>>y;
+
+                if (y==1)
+                {
+                    c.milligm_gm();
+                }
+                else if (y==2)
+                {
+                    c.gm_milligm();
+                }
+                else if (y==3)
+                {
+                    c.gm_kg();
+                }
+                else if (y==4)
+                {
+                    c.kg_gm();
+                }
+                else if (y==5)
+                {
+                    c.pound_kg();
+                }
+                else if (y==6)
+                {
+                    c.kg_pound();
+                }
+                else if (y==7)
+                {
+                    c.gm_pound();
+                }
+                else if (y==8)
+                {
+                    c.pound_gm();
+                }
+                else if (y==9)
+                {
+                    c.kg_mton();
+                }
+                else if (y==10)
+                {
+                    c.mton_kg();
+                }
+                else if (y==0)
+                {
+                    break;
+                }
+            }
+        }
+        else if(x==4)
+        {
+            system("cls");
+            cout<<endl<<"choose your unit conversion:"<<endl<<endl;
+
+            cout<<"   1: Square mm-Square cm"<<endl;
+            cout<<"   2: square cm-Square mm"<<endl;
+            cout<<"   3: square cm-square m"<<endl;
+            cout<<"   4: Square m-Square cm"<<endl;
+            cout<<"   5: Square m-Square km"<<endl;
+            cout<<"   6: Square km-Square m"<<endl;
+            cout<<"   7: Square feet-Square m"<<endl;
+            cout<<"   8: Square m-Square feet"<<endl;
+            cout<<"   9: Square Yard-Square m"<<endl;
+            cout<<"  10: Square m-Square yard"<<endl;
+            cout<<"  11: Square mile-Square km"<<endl;
+            cout<<"  12: Square km-Square mile"<<endl;
+            cout<<"  13: Acre-Hectare"<<endl;
+            cout<<"  14: Hectare-Acre"<<endl;
+            cout<<"  15: Square km-Acre "<<endl;
+            cout<<"  16: Acre-Square km"<<endl<<endl;
+            cout<<"  0: Back to The Main Menu"<<endl<<endl;
+
+            while(1)
+            {
+                cout<<endl<<"Please Enter Your Choice: "<<endl<<endl;
+                cin>>y;
+
+                if(y==1)
+                {
+                    e.mmSq_cmSq();
+                }
+                else if(y==2)
+                {
+                    e.cmSq_mmSq();
+                }
+                else if(y==3)
+                {
+                    e.cmSq_mSq();
+                }
+                else if(y==4)
+                {
+                    e.mSq_cmSq();
+                }
+                else if(y==5)
+                {
+                    e.mSq_kmSq();
+                }
+                else if(y==6)
+                {
+                    e.kmSq_mSq();
+                }
+                else if(y==7)
+                {
+                    e.feetSq_mSq();
+                }
+                else if(y==8)
+                {
+                    e.mSq_feetSq();
+                }
+                else if(y==9)
+                {
+                    e.yardSq_mSq();
+                }
+                else if(y==10)
+                {
+                    e.mSq_yardSq();
+                }
+                else if(y==11)
+                {
+                    e.mileSq_kmSq();
+                }
+                else if(y==12)
+                {
+                    e.kmSq_mileSq();
+                }
+                else if(y==13)
+                {
+                    e.acre_hect();
+                }
+                else if(y==14)
+                {
+                    e.hect_acre();
+                }
+                else if(y==15)
+                {
+                    e.kmSq_acre();
+                }
+                else if(y==16)
+                {
+                    e.acre_kmSq();
+                }
+                else if(y==0)
+                {
+                    break;
+                }
+            }
+        }
+        else if(x==5)
+        {
+            system("cls");
+            cout<<"choose your unit conversion:"<<endl;
+
+            cout<<"   1 : Milliliter to Liter"<<endl;
+            cout<<"   2 : Liter to milliliter"<<endl;
+            cout<<"   3 : Cubic mm to Cubic cm"<<endl;
+            cout<<"   4 : Cubic cm to Cubic mm"<<endl;
+            cout<<"   5 : Cubic cm to Cubic m"<<endl;
+            cout<<"   6 : Cubic m to Cubic cm"<<endl;
+            cout<<"   7 : Cubic Inch to Cubic m"<<endl;
+            cout<<"   8 : Cubic m to Cubic Inch"<<endl;
+            cout<<"   9 : Cubic feet to Cubic m"<<endl;
+            cout<<"  10 : Cubic m to Cubic feet"<<endl;
+            cout<<"  11 : Cubic m to Gallon (uk)"<<endl;
+            cout<<"  12 : Gallon to Cubic m"<<endl;
+            cout<<"  13 : Liter to Gallon"<<endl;
+            cout<<"  14 : Gallon to Liter"<<endl<<endl;
+            cout<<"  0 : Back to The Main Menu"<<endl<<endl;
+
+
+            while(1)
+            {
+                cout<<"Please Enter Your Choice: ";
+                cin>>y;
+
+                if (y==1)
+                {
+                    d.mL_L();
+                }
+                else if (y==2)
+                {
+                    d.L_mL();
+                }
+                else if (y==3)
+                {
+                    d.mmQ_cmQ();
+                }
+                else if (y==4)
+                {
+                    d.cmQ_mmQ();
+                }
+                else if (y==5)
+                {
+                    d.cmQ_mQ();
+                }
+                else if (y==6)
+                {
+                    d.mQ_cmQ();
+                }
+                else if (y==7)
+                {
+                    d.inchQ_mQ();
+                }
+                else if (y==8)
+                {
+                    d.mQ_inchQ();
+                }
+                else if (y==9)
+                {
+                    d.feetQ_mQ();
+                }
+                else if (y==10)
+                {
+                    d.mQ_feetQ();
+                }
+                else if (y==11)
+                {
+                    d.mQ_gallon();
+                }
+                else if (y==12)
+                {
+                    d.gallon_mQ();
+                }
+                else if (y==13)
+                {
+                    d.L_gallon();
+                }
+                else if(y==14)
+                {
+                    d.gallon_L();
+                }
+                else if(y==0)
+                {
+                    break;
+                }
+            }
+        }
+
+        else if(x==6)
+        {
+            system("cls");
+            cout<<endl<<"Choose your unit conversion:"<<endl<<endl;
+
+            cout<<"   1 : Horse Power to Joule/second"<<endl;
+            cout<<"   2 : Joule/second to Horse Power"<<endl<<endl;
+            cout<<"   0 : Back To The Main Menu"<<endl<<endl;
+         while(1)
+            {
+                cout<<"Please Enter Your Choice: ";
+                cin>>y;
+
+                if (y==1)
+                {
+                    g.HP_Js();
+                }
+                else if(y==2)
+                {
+                    g.Js_HP();
+                }
+                else if(y==0)
+                {
+                    break;
+                }
+            }
+        }
+
+
+
+        else if(x==0)
+        {
+            break;
+        }
+
+    }
+
+
 }
 
 
