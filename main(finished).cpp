@@ -170,7 +170,7 @@ void time::s_h()
 {
     cout<<"    Second=";
     cin>>i;
-    cout<<"    Hour="<<(long double)i/600;
+    cout<<"    Hour="<<(long double)i/3600;
 }
 void time::d_s()
 {
@@ -194,7 +194,7 @@ void time::h_d()
 {
     cout<<"    Hour=";
     cin>>i;
-    cout<<"    Day="<<(long double)i*3600;
+    cout<<"    Day="<<(long double)i/3600;
 }
 void time::min_h()
 {
