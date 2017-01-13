@@ -15,23 +15,31 @@ public:
 
 
 
-/*
+
 class time:public input
 {
 public:
-    void m_s();
-    void s_m();
+    void min_s();
+    void s_min();
     void h_s();
     void s_h();
     void d_s();
     void s_d();
     void d_h();
     void h_d();
-    void m_h();
-    void h_m();
+    void min_h();
+    void h_min();
 
 };
-*/
+
+class power:public input
+{
+    public:
+    void HP_Js();
+    void Js_HP();
+};
+
+
 class length:public input
 {
 public:
@@ -123,4 +131,372 @@ public:
 
 };
 
+//power
+void power::HP_Js()
+{
+    cout<<"    Horse Power= ";
+    cin>>i;
+    cout<<"    Joule/second= "<<(long double)i*745.699921;
+}
+void power::Js_HP()
+{
+    cout<<"    Joule/second= ";
+    cin>>i;
+    cout<<"    Horse Power= "<<(long double)i/745.699921;
+}
 
+//time
+
+void time::min_s()
+{
+    cout<<"    Minute= ";
+    cin>>i;
+    cout<<"    Second= "<<(long double)i*60;
+}
+void time::s_min()
+{
+    cout<<"    Second= ";
+    cin>>i;
+    cout<<"    Minute= "<<(long double)i/60;
+}
+
+void time::h_s()
+{
+    cout<<"    Hour=";
+    cin>>i;
+    cout<<"    Second="<<(long double)i*3600;
+}
+void time::s_h()
+{
+    cout<<"    Second=";
+    cin>>i;
+    cout<<"    Hour="<<(long double)i/600;
+}
+void time::d_s()
+{
+    cout<<"    Day=";
+    cin>>i;
+    cout<<"    Second="<<(long double)i*86400;
+}
+void time::s_d()
+{
+    cout<<"    Second=";
+    cin>>i;
+    cout<<"    Day="<<(long double)i/86400;
+}
+void time::d_h()
+{
+    cout<<"    Day=";
+    cin>>i;
+    cout<<"    Hour="<<(long double)i*3600;
+}
+void time::h_d()
+{
+    cout<<"    Hour=";
+    cin>>i;
+    cout<<"    Day="<<(long double)i*3600;
+}
+void time::min_h()
+{
+    cout<<"    Minute=";
+    cin>>i;
+    cout<<"    Hour="<<(long double)i/60;
+}
+void time::h_min()
+{
+    cout<<"    Hour=";
+    cin>>i;
+    cout<<"    Minute="<<(long double)i*60;
+}
+
+//length
+void length ::mm_m()
+{
+    cout<<"   Millimeter= ";
+    cin>>i;
+    cout<<"   Meter= "<<(long double)i*.001;
+}
+void length ::m_mm()
+{
+    cout<<"   Meter= ";
+    cin>>i;
+    cout<<"   Millimeter= "<<(long double)i*1000;
+}
+void length ::cm_m()
+{
+    cout<<"   Centimeter= ";
+    cin>>i;
+    cout<<"   Meter= "<<(long double)i*.01;
+}
+void length ::m_cm()
+{
+    cout<<"   Meter= ";
+    cin>>i;
+    cout<<"   Cm= "<<(long double)i*100;
+}
+void length::m_mile()
+{
+    cout<<"   Meter= ";
+    cin>>i;
+    cout<<"   Mile= "<<(long double)i*.00062;
+}
+void length::mile_m()
+{
+    cout<<"   Mile= ";
+    cin>>i;
+    cout<<"   Meter= "<<(long double)i*1609.344;
+}
+void length :: cm_km()
+{
+    cout<<"   Cm= ";
+    cin>>i;
+    cout<<"   Km= "<<(long double)i*0.00001;
+}
+
+void length :: km_cm()
+{
+    cout<<"   Km= ";
+    cin>>i;
+    cout<<"   Cm= "<<(long double)i*100000;
+}
+void length::feet_m()
+{
+    cout<<" Feet= ";
+    cin>>i;
+    cout<<"   Meter= "<<(long double)i*0.3048;
+}
+void length::m_feet()
+{
+    cout<<"   Meter= ";
+    cin>>i;
+    cout<<"   Feet= "<<(long double)i*3.28084;
+}
+void length::yard_m()
+{
+    cout<<"   Yard= ";
+    cin>>i;
+    cout<<"   Meter= " <<(long double)i*0.9144;
+}
+void length::m_yard()
+{
+    cout<<"   Meter= ";
+    cin>>i;
+    cout<<"   Yard= "<<(long double)i*1.09361;
+}
+void length::inch_m()
+{
+    cout<<"   Inch=";
+    cin>>i;
+    cout<<"   Meter="<<(long double)i*.0254;
+}
+void length::m_inch()
+{
+    cout<<"   Meter=";
+    cin>>i;
+    cout<<"   Inch="<<(long double)i*39.37008;
+}
+void length ::km_mile()
+{
+    cout<<"   Kilometer=";
+    cin>>i;
+    cout<<"   Mile="<<(long double)i*.6213712 ;
+}
+void length ::mile_km( )
+{
+    cout<<"   Mile=";
+    cin>>i;
+    cout<<"   Kilometer="<<(long double)i*1.60934;
+}
+
+
+//temperature
+
+void temp::cel_f()
+{
+    cout<<"   Celsius= ";
+    cin>>i;
+    cout<<"   Fahrenheit= " <<(long double)(((9*i)/5)+32);
+}
+void temp::f_cel()
+{
+    cout<<"   Fahrenheit= ";
+    cin>>i;
+    cout<<"   Celsius= "<<(long double)(((i-32)/9)*5);
+}
+void temp::cel_k()
+{
+    cout<<"   Celsius= ";
+    cin>>i;
+    cout<<"   Kelvin= "<<(long double)i+273;
+}
+void temp::k_cel()
+{
+    cout<<"   Kelvin= ";
+    cin>>i;
+    cout<<"   Celsius= "<<(long double)i-273;
+}
+
+//weight
+
+void weight::milligm_gm()
+{
+    cout<<"   Milligramm= ";
+    cin>>i;
+    cout<<"   Gramm= "<<(long double)i*.001;
+}
+void weight::gm_milligm()
+{
+    cout<<"   Gram= ";
+    cin>>i;
+    cout<<"   Milligramm= "<<(long double)i*1000;
+}
+void weight::pound_kg()
+{
+    cout<<"   Pound= ";
+    cin>>i;
+    cout<<"   Kilogramm= "<<(long double)i*.45359;
+}
+void weight::gm_kg()
+{
+    cout<<"   Gramm= ";
+    cin>>i;
+    cout<<"   Killogramm= "<<(long double)i*.001;
+}
+void weight::kg_gm()
+{
+    cout<<"   Killogramm= ";
+    cin>>i;
+    cout<<"   Gramm= "<<(long double)i*1000;
+}
+
+
+void weight::kg_pound()
+{
+    cout<<"   Kilogramm= ";
+    cin>>i;
+    cout<<"   Pound= "<<(long double)2.20462*i;
+}
+void weight::gm_pound()
+{
+    cout<<"   Gramm= ";
+    cin>>i;
+    cout<<"   Pound= "<<(long double)i*.0022;
+}
+void weight::pound_gm()
+{
+    cout<<"   Pound= ";
+    cin>>i;
+    cout<<"   Gramm= "<<(long double)i*453.59237;
+}
+void weight::kg_mton()
+{
+    cout<<"   Kilogramm= ";
+    cin>>i;
+    cout<<"   Ton= "<<(long double)i*.001;
+}
+void weight::mton_kg()
+{
+    cout<<"   Ton= ";
+    cin>>i;
+    cout<<"   kilogramm= "<<(long double)i*1000;
+}
+
+//area
+
+void area::mmSq_cmSq()
+{
+    cout<<"   Squqre mm= ";
+    cin>>i;
+    cout<<"   Square cm= "<<i*.01;
+}
+void area::cmSq_mmSq()
+{
+    cout<<"   Square cm= ";
+    cin>>i;
+    cout<<"   Square mm= "<<i*100;
+}
+void area::cmSq_mSq()
+{
+    cout<<"   Square cm= ";
+    cin>>i;
+    cout<<"   Square m= "<<i*.0001;
+}
+void area::mSq_cmSq()
+{
+    cout<<"   Square m= ";
+    cin>>i;
+    cout<<"   Square cm= "<<i*10000;
+}
+void area::mSq_kmSq()
+{
+    cout<<"   Square m= ";
+    cin>>i;
+    cout<<"   Square km= "<<i*.000001;
+}
+void area::kmSq_mSq()
+{
+    cout<<"   Square km= ";
+    cin>>i;
+    cout<<"   Square m= "<<i*1000000;
+}
+void area::feetSq_mSq()
+{
+    cout<<"   Square feet= ";
+    cin>>i;
+    cout<<"   Square m= "<<i*.0929;
+}
+void area::mSq_feetSq()
+{
+    cout<<"   Square m= ";
+    cin>>i;
+    cout<<"   Square feet= "<<i*10.76391;
+}
+void area::yardSq_mSq()
+{
+    cout<<"   Square yard= ";
+    cin>>i;
+    cout<<"   Square m= "<<i*.83613;
+}
+void area::mSq_yardSq()
+{
+    cout<<"   Square m= ";
+    cin>>i;
+    cout<<"   Square yard= "<<i*1.19599;
+}
+void area::mileSq_kmSq()
+{
+    cout<<"   Square mile= ";
+    cin>>i;
+    cout<<"   Square km= "<<i*2.5899;
+}
+void area::kmSq_mileSq()
+{
+    cout<<"   Square km= " ;
+    cin>>i;
+    cout<<"   Square mile= "<<i*.3861;
+}
+void area::acre_hect()
+{
+    cout<<"   Acre= ";
+    cin>>i;
+    cout<<"   Hectare= "<<i*.40469;
+}
+void area::hect_acre()
+{
+    cout<<"   Hectare= ";
+    cin>>i;
+    cout<<"   Acre= " <<i*2.47105;
+}
+void area::acre_kmSq()
+{
+    cout<<"   Acre= ";
+    cin>>i;
+    cout<<"   Square km= "<<i*.00405;
+}
+void area::kmSq_acre()
+{
+    cout<<"   Square km= ";
+    cin>>i;
+    cout<<"   Acre= "<<i*247.10538;
+
+}
